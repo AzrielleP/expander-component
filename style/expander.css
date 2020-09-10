@@ -1,0 +1,101 @@
+/* EXPANDER COMPONENT */
+/* =========================
+Setting up variables
+============================ */
+/* =========================
+Document Styling
+============================ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 1em "Roboto", sans-serif;
+}
+
+.container {
+  margin: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.important {
+  font-weight: bold;
+  color: #96031a;
+}
+
+/* =========================
+Expander Styling
+============================ */
+.expander {
+  margin: 0 1em;
+}
+.expander .expander-button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.3em 0;
+  padding: 1em;
+  border: none;
+  outline: none;
+  background-color: #1b1b1e;
+  font: bolder 1.2em "Kumbh Sans", sans-serif;
+  color: #fbfffe;
+  text-align: left;
+}
+.expander .expander-button::after {
+  content: "+";
+  margin-left: 1em;
+  font: bolder 1.5em "Kumbh Sans", sans-serif;
+  color: #faa916;
+}
+.expander .expander-button-active::after {
+  content: "-";
+}
+.expander .expander-text {
+  overflow: hidden;
+  max-height: 0;
+  margin: 1em 0;
+  padding: 0 1.5em;
+  -webkit-transition: max-height 0.2s, border-color 0.3s, padding 0.5s;
+  -moz-transition: max-height 0.2s, border-color 0.3s, padding 0.5s;
+  -o-transition: max-height 0.2s, border-color 0.3s, padding 0.5s;
+  transition: max-height 0.2s, border-color 0.3s, padding 0.5s;
+  border: 0.5px solid #fbfffe;
+  border-radius: 5px;
+}
+.expander .expander-text-active {
+  max-height: 100em;
+  border-color: #6d676e;
+  padding: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .flexed {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 0 auto;
+  }
+}
+
+/*# sourceMappingURL=expander.css.map */
